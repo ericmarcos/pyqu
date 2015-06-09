@@ -104,7 +104,7 @@ class Q:
         try:
             return QLabel(self, i, i + 1)
         except:
-            return QLabel(self, i[0], i[1])
+            return QLabel(self, i.start, i.stop)
 
     def __pow__(self, q):
         return Q(values=tensor([self._values], [q._values])[0])
